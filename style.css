@@ -1,0 +1,372 @@
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+}
+
+.navbar {
+    background-color: #ddd;
+    color: #000;
+}
+
+nav {
+    animation: nav 2s 1s;
+    transform: 0 -100%;
+    opacity: 0;
+    animation-fill-mode: forwards;
+
+}
+
+#home {
+    margin-top: 55px;
+    min-height: 95vh;
+    background: url('img-new/Home/Mobile/PH2_5385.jpg') no-repeat center/cover;
+  
+    animation: fadeinHomeBg 2s ease-in-out;
+    position: relative;
+}
+
+#home::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(160, 158, 158, 0.44);
+    z-index: 0;
+}
+
+.social {
+    width: 20%;
+}
+
+.social a:nth-child(1) {
+    animation: socialDelayed 2s;
+    translate: -50px 0;
+    scale: 0;
+    animation-fill-mode: forwards;
+}
+.social a:nth-child(2) {
+    animation: socialDelayed 2s;
+    animation-delay: .2s;
+    translate: -50px 0;
+    scale: 0;
+    animation-fill-mode: forwards;
+}
+.social a:nth-child(3) {
+    animation: socialDelayed 2s;
+    animation-delay: .4s;
+    translate: -50px 0;
+    scale: 0;
+    animation-fill-mode: forwards;
+}
+.social a:nth-child(4) {
+    animation: socialDelayed 2s;
+    animation-delay: .6s;
+    translate: -50px 0;
+    scale: 0;
+    animation-fill-mode: forwards;
+}
+.social a:nth-child(5) {
+    animation: socialDelayed 2s;
+    animation-delay: .8s;
+    translate: -50px 0;
+    scale: 0;
+    animation-fill-mode: forwards;
+}
+.social a:nth-child(6) {
+    animation: socialDelayed 2s;
+    animation-delay: 1s;
+    translate: -50px 0;
+    scale: 0;
+    animation-fill-mode: forwards;
+}
+
+.social a {
+    color: #fff;
+    z-index: 1;
+    cursor: pointer;
+    transition: color .5s ease-out;
+} 
+
+.social a:hover {
+    color: #000;
+    transition: color .5s ease-out;
+}
+
+.solo-link {
+    color: #000;
+}
+
+.solo-link:hover {
+    color: rgba(0, 0, 0, 0.355);
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeinHomeBg {
+    0% {
+        opacity: 0;
+        scale: .95;
+    }
+    100% {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+
+@keyframes socialDelayed {
+    0% {
+        translate: -50px 0;
+        scale: 0;
+    }
+    100% {
+        translate: 0 0;
+        scale: 1;
+    }
+}
+
+@keyframes nav {
+    0% {
+        translate: 0 -100%;
+        opacity: 0;
+    }
+    100% {
+        translate: 0 0;
+        opacity: 1;
+    }
+}
+
+@keyframes hover {
+    0% {
+        color: #fff;
+        rotate: y 0deg;
+        cursor: pointer
+    }
+   
+    100% {
+        color: #000;
+        rotate: y 360deg;
+        cursor: pointer
+    }
+
+
+}
+
+/*-----About & Music--------*/
+section:not(#home) {
+    padding-block: 50px;
+}
+
+.tab-links,
+.tab-music-links {
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after,
+.tab-music-links::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background: #97888d;
+    position: absolute;
+    left: 10%;
+    bottom: -3.5px;
+    transition: 0.5s;
+}
+
+.tab-music-links.active-link::after,
+.tab-links.active-link::after {
+    width: 80%;
+}
+
+
+.tab-contents,
+.tab-music-contents {
+    display: none;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.tab-music-contents.active-tab,
+.tab-contents.active-tab {
+    display: block;
+}
+
+h6 {
+    margin-block: 16px;
+}
+
+.biophoto-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*--------CDs-------*/
+
+#tab-music-3 .row .col {
+    /*filter: grayscale(60%);*/
+}
+
+  
+
+/*--------Concerts-------*/
+.timeline-area {
+    background: url(img-new/photoGallery/13.jpg) no-repeat top/cover;
+}
+
+.timeline-area-cd {
+    background: url(img/concerts/PH2_5488.jpg) no-repeat top/cover;
+}
+
+.timeline-area,
+.timeline-area-cd {
+    margin: 30px auto;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+
+/*
+.timeline-area::after {
+    background: linear-gradient(rgba(170, 170, 170, 0.05), rgb(170, 170, 170), rgba(170, 170, 170, 0.05));
+    content: "";
+    position: absolute;
+    left: -23px;
+    top: -70px;
+    width: 2px;
+    height: 130%;
+}
+*/
+
+.timeline-area div{
+    /*background: #aaaaaa44;*/
+    /*background: #c7c6c691; */
+    background: #c7c6c6c8;
+    padding:  20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px black;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    z-index: 1;
+    transition: all .3s ease-in-out;
+}
+
+.cd-area-img {
+    background: #aaaaaa44;
+    /*background: #c7c6c691; */
+    /*background: #c7c6c6c8;*/
+    box-shadow: 2px 2px 10px black;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+}
+
+.timeline-area div:hover,
+.cd-area-img:hover {
+    scale: 1.03;
+    background-color: #aaaaaab3;
+    color: #000;
+    cursor:pointer;
+}
+
+.timeline-area div h5 {
+    color: #000;
+}
+
+.timeline-area div p {
+    color: rgb(0, 0, 0);
+    margin: 0;
+    padding-left: 20px;
+    z-index: 2;
+}
+
+.timeline-area-cd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.img-div img{
+    z-index: 100000;
+}
+
+/*
+.cd-text {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 40px;
+}
+.cd-main-text,
+.cd-inner-text {
+    flex: 100%;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px black;
+    padding: 10px;
+}
+
+.cd-text div h6,
+.cd-text div p {
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 1rem;
+} */
+
+
+/*-----------Contact----------------*/
+
+.contact-area {
+    max-width: 90%;
+}
+
+.social-contact a {
+    color: rgb(53, 52, 52);
+    cursor: pointer;
+    transition: all .5s ease-out;
+} 
+
+.social-contact a:hover {
+    color: rgb(179, 179, 179);
+    translate: 0 -10px;
+    scale: 1.1;
+}
+
+
+
+
+
+
+
+/*------ Media Q ---------*/
+
+@media screen and (min-width: 900px){
+    #home {
+        background: url('img-new/Home/Desktop/Csaki_1.jpg') no-repeat left top/cover;
+    }
+
+    .cd-area-text {
+        width: 80%;
+    }
+
+    .social-contact {
+        max-width: 600px;
+    }
+    
+}
+
